@@ -12,11 +12,14 @@
         <activity android:name=".Success" />
         <activity android:name=".ForgotPassword" />
         <activity android:name=".ResetPassword" />
-        <activity android:name=".WelcomeSlideAssign" />
-        <activity android:name=".WelcomeSlideSuperHero" />
+        <activity android:name=".WelcomeSlideAssign"
+            android:theme="@style/Theme.Kalori.Nobar" />
+        <activity android:name=".WelcomeSlideSuperHero"
+            android:theme="@style/Theme.Kalori.Nobar" />
+        <activity android:name=".WelcomeSlideCalendar"
+            android:theme="@style/Theme.Kalori.Nobar"/>
         <activity android:name=".WelcomeBack" />
-        <activity android:name=".WelcomeSlideCalendar" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" android:theme="@style/Theme.Kalori.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
