@@ -28,4 +28,10 @@
     <string name="welcome_to_dts_vsga">Welcome To DTS VSGA</string>
     <string name="work_happen">Work Happen</string>
     <string name="get_notified_when_work_happens">Get Notified When Work Happens</string>
+    <string name="contact_us">Contact us</string>
+    <string name="don_t_have_an_account">Dont have an account?</string>
+    <string name="sign_up">Sign up</string>
+    <string name="do_you_have_an_account">Do you have an account?</string>
+    <string name="registration">Registration</string>
+    <string name="nama">Nama</string>
 </resources>

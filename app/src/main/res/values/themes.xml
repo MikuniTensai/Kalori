@@ -19,9 +19,6 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>
     </style>
 
-    <style name="Theme.Kalori.Splash" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="colorPrimary">#f66d9b</item>
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>
-    </style>
+    <style name="Theme.Kalori.Splash" parent="Theme.AppCompat.Light.NoActionBar"/>
 
 </resources>

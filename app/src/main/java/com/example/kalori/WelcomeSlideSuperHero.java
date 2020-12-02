@@ -23,4 +23,13 @@ public class WelcomeSlideSuperHero extends AppCompatActivity {
         Intent i = new Intent(this, WelcomeBack.class);
         startActivity(i);
     }
+
+    public void clickContactUs(View view) {
+        Intent i = new Intent(Intent.ACTION_SEND);
+        i.setType("text/plain");
+        i.putExtra(Intent.EXTRA_EMAIL, new String[]{"mikunitensai@gmail.com", "1818046@scholar.itn.ac.id"});
+        i.putExtra(Intent.EXTRA_SUBJECT, "Email");
+        i.putExtra(Intent.EXTRA_TEXT, "Welcome to Kalori, and thanks for supporting");
+        startActivity(Intent.createChooser(i, "Select App Mail"));
+    }
 }

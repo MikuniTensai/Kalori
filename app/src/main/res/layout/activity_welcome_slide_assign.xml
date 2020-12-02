@@ -46,9 +46,10 @@
         android:layout_height="wrap_content"
         android:scaleType="fitEnd"
         android:src="@drawable/bg_purple"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintRight_toRightOf="parent" />
 
     <Button
         android:id="@+id/btn_get_started"
@@ -81,5 +82,22 @@
         android:layout_marginBottom="72dp"
         android:onClick="clickLogin"
         tools:ignore="OnClick" />
+
+    <TextView
+        android:id="@+id/tv_contact_us"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/contact_us"
+        android:onClick="clickContactUs"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/background_satu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_text"
+        tools:ignore="OnClick,UnknownIdInLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

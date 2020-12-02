@@ -25,12 +25,18 @@ public class ResetPassword extends AppCompatActivity {
     }
 
     public void postChangePassword(View view) {
-        if (TextUtils.isEmpty(editTextCode.toString().trim()) && TextUtils.isEmpty(editTextPassword.toString().trim()) && TextUtils.isEmpty(editTextConfirmPassword.toString().trim())) {
-            toastPostChangePassword(view, "Code dan Password tidak boleh kosong!");
-        } else if (TextUtils.isEmpty(editTextCode.getText().toString().trim())) {
-            toastPostChangePassword(view, "Code tidak valid!");
-        } else if (TextUtils.isEmpty(editTextPassword.getText().toString().trim()) && TextUtils.isEmpty(editTextConfirmPassword.getText().toString().trim())) {
-            toastPostChangePassword(view, "Password tidak cocok");
+        boolean code = TextUtils.isEmpty(editTextCode.toString().trim());
+        boolean password = TextUtils.isEmpty(editTextPassword.toString().trim());
+        boolean confirmations = TextUtils.isEmpty(editTextConfirmPassword.toString().trim());
+
+        if ( code && password && confirmations ) {
+            toastPostChangePassword(view, "Kode dan Password tidak boleh kosong!");
+        } else if (code) {
+            toastPostChangePassword(view, "Kode kosong atau tidak valid!");
+        } else if (password && confirmations) {
+            toastPostChangePassword(view, "Password tidak boleh kosong");
+        } else if (password == confirmations) {
+            toastPostChangePassword(view, "Password tidak cocok, coba cek kembali");
         }
         else {
             Intent i = new Intent(ResetPassword.this, Success.class);
@@ -40,9 +46,5 @@ public class ResetPassword extends AppCompatActivity {
 
     public void toastPostChangePassword(View view, String string) {
         Toast.makeText(view.getContext(), string, Toast.LENGTH_SHORT).show();
-    }
-
-    public static boolean isValidEmail(CharSequence email) {
-        return (Patterns.EMAIL_ADDRESS.matcher(email).matches());
     }
 }

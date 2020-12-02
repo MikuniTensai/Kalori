@@ -50,4 +50,9 @@ public class WelcomeBack extends AppCompatActivity {
     public static boolean isValidEmail(CharSequence email) {
         return (Patterns.EMAIL_ADDRESS.matcher(email).matches());
     }
+
+    public void clickSignUp(View view) {
+        Intent intent = new Intent(WelcomeBack.this, RegisterActivity.class);
+        startActivity(intent);
+    }
 }
