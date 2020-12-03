@@ -74,8 +74,8 @@ public class ProfileActivity extends AppCompatActivity {
         Toast.makeText(this, "Your data has been deleted..", Toast.LENGTH_SHORT).show();
 
         Intent intent = new Intent(getApplicationContext(), WelcomeBack.class);
-        intent.addCategory(Intent.CATEGORY_HOME);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.addCategory(Intent.CATEGORY_HOME);
         startActivity(intent);
         this.finish();
     }

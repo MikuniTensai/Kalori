@@ -67,7 +67,8 @@ public class AccountActivity extends AppCompatActivity {
 
     public void onBtnLogout_Click(View view) {
         Intent intent = new Intent(AccountActivity.this, WelcomeBack.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_NO_HISTORY);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.addCategory(Intent.CATEGORY_HOME);
         startActivity(intent);
     }
 }
