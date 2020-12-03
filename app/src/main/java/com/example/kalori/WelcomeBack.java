@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.text.method.PasswordTransformationMethod;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.CheckBox;
@@ -16,8 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.kalori.data.AppDbProvider;
 import com.example.kalori.data.User;
 import com.example.kalori.data.UserDao;
-
-import java.util.Objects;
+import com.example.kalori.ui.HomeActivity;
 
 public class WelcomeBack extends AppCompatActivity {
 

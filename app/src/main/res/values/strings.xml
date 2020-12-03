@@ -36,6 +36,6 @@
     <string name="registration">Registration</string>
     <string name="nama">Nama</string>
     <string name="phone_number">Phone Number</string>
-    <string name="welcome_home">Welcome Home!!!</string>
+    <string name="welcome_account">Welcome</string>
     <string name="sign_in">Sign In</string>
 </resources>
