@@ -50,7 +50,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:hint="@string/enter_your_email"
+        android:hint="@string/enter_your_username"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/reset_code" />
@@ -66,16 +66,22 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_txt_email" />
 
-    <EditText
-        android:id="@+id/edt_txt_password"
-        android:layout_width="match_parent"
+    <CheckBox
+        android:id="@+id/chk_remember_username"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Remember my Username"
         android:layout_marginTop="8dp"
-        android:hint="@string/enter_your_password"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:inputType="textVisiblePassword"
-        app:layout_constraintTop_toBottomOf="@+id/new_password" />
+        app:layout_constraintTop_toBottomOf="@+id/til_password" />
+
+    <CheckBox
+        android:id="@+id/chk_keep_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Keep me Logged In"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chk_remember_username" />
 
     <TextView
         android:id="@+id/forgot_password"
@@ -86,9 +92,31 @@
         android:textColor="#313131"
         android:textSize="18sp"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edt_txt_password"
+        app:layout_constraintTop_toBottomOf="@id/chk_keep_login"
         android:onClick="clickForgot"
         tools:ignore="OnClick" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:passwordToggleEnabled="true"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@+id/new_password"
+        android:background="@color/white">
+
+        <EditText
+            android:id="@+id/edt_txt_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:background="@color/white"
+            android:hint="@string/enter_your_password"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btn_Login"
@@ -130,7 +158,6 @@
             android:text="@string/sign_up"
             android:onClick="clickSignUp"
             tools:ignore="OnClick" />
-
 
     </LinearLayout>
 

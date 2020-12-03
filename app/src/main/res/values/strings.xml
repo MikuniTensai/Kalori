@@ -20,6 +20,7 @@
     <string name="username">Username</string>
     <string name="enter_your_email">Enter Your Email</string>
     <string name="password">Password</string>
+    <string name="enter_your_username">Enter your username</string>
     <string name="log_in">LOG IN</string>
     <string name="task_and_assign_them_to_colleagues">Task and Assign them to colleagues</string>
     <string name="task_and_assign">Task and Assign</string>
@@ -34,4 +35,7 @@
     <string name="do_you_have_an_account">Do you have an account?</string>
     <string name="registration">Registration</string>
     <string name="nama">Nama</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="welcome_home">Welcome Home!!!</string>
+    <string name="sign_in">Sign In</string>
 </resources>

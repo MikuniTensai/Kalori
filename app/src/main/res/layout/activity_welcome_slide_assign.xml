@@ -27,6 +27,7 @@
         android:text="@string/task_and_assign"
         android:fontFamily="@font/montserrat_black"
         android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="@id/background_tiga"
         android:textColor="#313131" />
 
     <TextView
@@ -44,12 +45,14 @@
         android:id="@+id/background_tiga"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingTop="160dp"
         android:scaleType="fitEnd"
         android:src="@drawable/bg_purple"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/btn_get_started"
@@ -65,8 +68,7 @@
         android:layout_marginBottom="32dp"
         android:textSize="18sp"
         android:fontFamily="@font/montserrat_regular"
-        android:onClick="clickGetStarted"
-        />
+        android:onClick="clickGetStarted" />
 
     <TextView
         android:id="@+id/login_text"
@@ -94,7 +96,7 @@
         android:text="@string/contact_us"
         android:onClick="clickContactUs"
         android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/background_satu"
+        app:layout_constraintBottom_toBottomOf="@+id/background_tiga"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_text"
