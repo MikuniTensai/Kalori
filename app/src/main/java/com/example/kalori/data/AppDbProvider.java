@@ -6,26 +6,26 @@ import androidx.room.Room;
 
 public class AppDbProvider
 {
-    private static KaloriDatabase instance;
-    private static KaloriDatabase asynchronousInstance;
+    private static BMIDatabase instance;
+    private static BMIDatabase asynchronousInstance;
 
-    public static KaloriDatabase getInstance(Context context)
+    public static BMIDatabase getInstance(Context context)
     {
         if(AppDbProvider.instance == null)
         {
             AppDbProvider.instance = Room.databaseBuilder(
-                    context, KaloriDatabase.class, "kaloriapp.db").allowMainThreadQueries().build();
+                    context, BMIDatabase.class, "kaloriapp.db").allowMainThreadQueries().build();
         }
 
         return AppDbProvider.instance;
     }
 
-    public static KaloriDatabase getAsynchronousInstance(Context context)
+    public static BMIDatabase getAsynchronousInstance(Context context)
     {
         if(AppDbProvider.asynchronousInstance == null)
         {
             AppDbProvider.asynchronousInstance = Room.databaseBuilder(
-                    context, KaloriDatabase.class, "kaloriapp.db").build();
+                    context, BMIDatabase.class, "kaloriapp.db").build();
         }
 
         return AppDbProvider.asynchronousInstance;

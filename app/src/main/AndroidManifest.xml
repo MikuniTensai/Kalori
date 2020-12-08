@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/ic_logo"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Kalori">
+        android:theme="@style/Theme.BMI">
         <activity android:name=".data.AccountActivity" />
         <activity android:name=".ui.NewBmiActivity" />
         <activity android:name=".ui.HomeActivity" />
@@ -19,11 +19,11 @@
         <activity android:name=".ResetPassword" />
         <activity
             android:name=".WelcomeSlideAssign"
-            android:theme="@style/Theme.Kalori.Nobar" />
+            android:theme="@style/Theme.BMI.Nobar" />
         <activity android:name=".WelcomeBack" />
         <activity
             android:name=".MainActivity"
-            android:theme="@style/Theme.Kalori.Splash">
+            android:theme="@style/Theme.BMI.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -8,17 +8,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
-import android.util.Log;
-import android.util.Patterns;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.RadioButton;
 import android.widget.Toast;
 
 import com.example.kalori.data.AppDbProvider;
 import com.example.kalori.data.DatabaseTask;
 import com.example.kalori.data.DatabaseTaskEventListener;
-import com.example.kalori.data.KaloriDatabase;
+import com.example.kalori.data.BMIDatabase;
 import com.example.kalori.data.User;
 import com.example.kalori.data.UserDao;
 
@@ -75,7 +72,7 @@ public class RegisterActivity extends AppCompatActivity {
                 public Object runDatabaseOperation(RoomDatabase database, Object... params) {
                     User user = (User) params[0];
 
-                    ((KaloriDatabase)database).userDao().insertAll(user);
+                    ((BMIDatabase)database).userDao().insertAll(user);
 
                     return null;
                 }
@@ -92,6 +89,8 @@ public class RegisterActivity extends AppCompatActivity {
                 }
             }).execute(this.makeUser());
             Intent intent = new Intent(this, WelcomeBack.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+            intent.addCategory(Intent.CATEGORY_HOME);
             startActivity(intent);
         }
     }

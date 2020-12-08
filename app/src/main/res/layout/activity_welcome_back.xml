@@ -148,7 +148,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:text="@string/do_you_have_an_account"/>
+            android:text="@string/do_you_have_an_account"
+            android:onClick="clickSignAccount"/>
 
         <TextView
             android:id="@+id/tv_signup"
